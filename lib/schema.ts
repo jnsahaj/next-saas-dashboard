@@ -202,7 +202,7 @@ export const projects = pgTable("projects", {
 
 // --- Relations ---
 
-export const usersRelations = relations(users, ({ many, one }) => ({
+export const usersRelations = relations(users, ({ many }) => ({
   // One user can be the reviewer for many document sections
   reviewedSections: many(documentSections, { relationName: "Reviewer" }),
   // One user can own many documents
