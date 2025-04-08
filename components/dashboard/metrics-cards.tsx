@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export async function SectionCards() {
+export async function MetricsCards() {
   const latestMetrics = await db
     .select()
     .from(dashboardMetrics)
