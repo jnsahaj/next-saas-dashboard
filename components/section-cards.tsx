@@ -54,7 +54,7 @@ export async function SectionCards() {
         <CardHeader>
           <CardDescription>New Customers</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {metrics.newCustomers.toLocaleString()}
+            {metrics.newCustomers?.toLocaleString() || "0"}
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
@@ -73,7 +73,7 @@ export async function SectionCards() {
         <CardHeader>
           <CardDescription>Active Accounts</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {metrics.activeAccounts.toLocaleString()}
+            {metrics.activeAccounts?.toLocaleString() || "0"}
           </CardTitle>
           <CardAction>
             <Badge variant="outline">

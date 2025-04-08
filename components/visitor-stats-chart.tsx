@@ -62,6 +62,7 @@ export function VisitorStatsChart() {
 
   const { data: chartData, isLoading } = useSWR(
     timeRange ? ["visitorStats", timeRange] : null,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     ([_, range]) => fetchVisitorStatsAction(range as TimeRange),
     {
       keepPreviousData: true,
