@@ -3,10 +3,12 @@ import { VisitorStatsChart } from "@/components/dashboard/visitor-stats-chart";
 import { DocumentsTable } from "@/components/dashboard/documents-table";
 import { MetricsCards } from "@/components/dashboard/metrics-cards";
 import { SiteHeader } from "@/components/site-header";
+import { getDocuments } from "@/lib/data/documents"; // Import the new data fetching function
 
-import data from "./data.json"; // Assuming data.json is now in ./app/
+export default async function Page() {
+  // Make the component async
+  const documentsPromise = getDocuments(); // Fetch data
 
-export default function Page() {
   return (
     <>
       <SiteHeader />
@@ -19,7 +21,7 @@ export default function Page() {
                 <VisitorStatsChart />
               </Suspense>
             </div>
-            <DocumentsTable data={data} />
+            <DocumentsTable documentsPromise={documentsPromise} />
           </div>
         </div>
       </div>
