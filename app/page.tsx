@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { VisitorStatsChart } from "@/components/dashboard/visitor-stats-chart";
-import { DataTable } from "@/components/data-table";
+import { DocumentsTable } from "@/components/dashboard/documents-table";
 import { MetricsCards } from "@/components/dashboard/metrics-cards";
 import { SiteHeader } from "@/components/site-header";
 
@@ -19,7 +19,7 @@ export default function Page() {
                 <VisitorStatsChart />
               </Suspense>
             </div>
-            <DataTable data={data} />
+            <DocumentsTable data={data} />
           </div>
         </div>
       </div>
