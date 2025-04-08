@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { VisitorStatsChart } from "@/components/dashboard/visitor-stats-chart";
 import { DocumentsTable } from "@/components/dashboard/documents-table";
 import { MetricsCards } from "@/components/dashboard/metrics-cards";
-import { SiteHeader } from "@/components/site-header";
 import { getDocuments } from "@/lib/data/documents"; // Import the new data fetching function
 
 export default async function Page() {
@@ -11,7 +10,6 @@ export default async function Page() {
 
   return (
     <>
-      <SiteHeader />
       <div className="flex flex-1 flex-col">
         <div className="@container/main flex flex-1 flex-col gap-2">
           <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">

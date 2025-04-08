@@ -221,6 +221,7 @@ export function VisitorStatsChart() {
                 }
               />
               <Area
+                isAnimationActive={false}
                 dataKey="mobile"
                 type="natural"
                 fill="url(#fillMobile)"
@@ -229,6 +230,7 @@ export function VisitorStatsChart() {
                 stackId="a"
               />
               <Area
+                isAnimationActive={false}
                 dataKey="desktop"
                 type="natural"
                 fill="url(#fillDesktop)"

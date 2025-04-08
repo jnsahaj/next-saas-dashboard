@@ -5,6 +5,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import { SiteHeader } from "@/components/site-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,10 @@ export default function RootLayout({
             }
           >
             <AppSidebar variant="inset" />
-            <SidebarInset>{children}</SidebarInset>
+            <SidebarInset>
+              <SiteHeader />
+              {children}
+            </SidebarInset>
           </SidebarProvider>
         </NuqsAdapter>
       </body>
