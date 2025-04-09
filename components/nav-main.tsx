@@ -33,7 +33,7 @@ export function NavMain({
                 isActive={pathname === item.url}
                 asChild
               >
-                <Link href={item.url} prefetch>
+                <Link href={item.url}>
                   {item.icon && <item.icon />}
                   <span>{item.title}</span>
                 </Link>
